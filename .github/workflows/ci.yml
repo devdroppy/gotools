@@ -25,7 +25,7 @@ jobs:
         uses: gradle/gradle-build-action@v2
 
       - name: Build extension
-      - run: ./gradlew build
+        run: ./gradlew build
       - uses: actions/upload-artifact@v4
         with:
           name: distribution
