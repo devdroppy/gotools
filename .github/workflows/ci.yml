@@ -18,14 +18,14 @@ jobs:
           distribution: 'temurin'
           java-version: '17'
 
-      - name: Install Ghidra
-        run: .github/scripts/install_ghidra.sh
-
       - name: Setup Gradle
         uses: gradle/gradle-build-action@v2
 
+      - name: Install Ghidra
+        run: .github/scripts/install_ghidra.sh
+
       - name: Build extension
-        run: ./gradlew build
+        run: gradle build
       - uses: actions/upload-artifact@v4
         with:
           name: distribution
